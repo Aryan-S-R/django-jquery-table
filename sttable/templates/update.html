@@ -1,0 +1,37 @@
+{% include 'index.html' %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <form action="" method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="select"><b>Select position </b></label>
+                    <select class="custom-select" id="inputGroupSelect01" name="role" required>
+                        <option selected>Choose...</option>
+                        <option value="1">Teacher</option>
+                        <option value="2">Student</option>
+                        <option value="3">Principal</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="name" class="form-label sm-3  "><b>Name</b></label>
+                    <input type="text" class="form-control" name="name" id="name" placeholder="Enter your name" required
+                        value="{{stt.name}}">
+                </div>
+                <div class="form-group">
+                    <label for="email" class="form-label sm-3"><b>E-mail</b></label>
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email"
+                        required value="{{stt.email}}">
+                </div>
+                <div class="form-group">
+                    <label for="number" class="form-label sm-3"><b>Phone-number</b></label>
+                    <input type="number" class="form-control" name="number" id="number"
+                        placeholder="Enter your phone-number" required value="{{stt.number}}">
+                </div>
+                <div class="col-md-4 offset-md-4">
+                    <button class="form-control bg bg-primary" style="color: snow;">Update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
